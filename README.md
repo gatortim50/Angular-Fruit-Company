@@ -39,12 +39,14 @@ Configuration in app.js
   
  Steps to Run Project (assumes you have nodejs installed)
  
+```
  git clone git@github.com:gatortim50/Angular-Fruit-Company.git
  cd Angular-Fruit-Company
  npm install
  bower install ng-table
  bower install angular-local-storage
  grunt serve 
+```
 
 
 
