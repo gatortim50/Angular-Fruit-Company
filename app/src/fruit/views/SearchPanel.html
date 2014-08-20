@@ -1,0 +1,34 @@
+<div class="container" ng-controller="SearchPanelCtrl">
+
+  <p> <h4>css padding</h4> </p></br>
+
+  <ul class="sidebar-nav">
+    <li><a href="#/"></a></li>
+    <li><a href="#/"></a></li>
+    <li><a href="#">Search Panel</a></li>
+  </ul>
+
+  <div>
+    <div>Select By Color: {{Data.Color}}</div>
+    <select ng-init="searchColor=''" ng-model="Data.Color">
+      <option value="">All</option>
+      <option value="Green">Green</option>
+      <option value="Orange">Orange</option>
+      <option value="Red">Red</option>
+    </select>
+  </div>
+
+  <div>
+    <div>Select By Location: {{Data.Location}}</div>
+    <select ng-init="searchLoc=''" ng-model="Data.Location">
+      <option value="">All</option>
+      <option value="Jamaica">Jamaica</option>
+      <option value="Panama">Panama</option>
+      <option value="USA">USA</option>
+      <option value="Spain">Spain</option>
+    </select>
+  </div>
+
+  <!-- tt>{{searchColor| json}}</tt><br/ -->
+
+</div>
