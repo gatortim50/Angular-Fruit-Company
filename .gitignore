@@ -8,3 +8,5 @@ bower_components
 *.js_
 *.js.deps
 *.js.map
+.idea
+.idea/*

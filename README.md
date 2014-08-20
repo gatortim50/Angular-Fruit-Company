@@ -36,6 +36,15 @@ Configuration in app.js
   SearchPanel.html - 2 selects to filter the the data
   SearchResults.html - ng-table / ng-repeat and filters
   SearchDetails.html - simple detail page
+  
+ Steps to Run Project (assumes you have nodejs installed)
+ 
+ git clone git@github.com:gatortim50/Angular-Fruit-Company.git
+ cd Angular-Fruit-Company
+ npm install
+ bower install ng-table
+ bower install 
+ grunt serve 
 
 
 
