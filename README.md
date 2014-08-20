@@ -43,7 +43,7 @@ Configuration in app.js
  cd Angular-Fruit-Company
  npm install
  bower install ng-table
- bower install 
+ bower install angular-local-storage
  grunt serve 
 
 
