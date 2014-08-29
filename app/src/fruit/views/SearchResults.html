@@ -1,6 +1,7 @@
 <div class="container" ng-controller="SearchResultsCtrl">
 
-  <p> padding this needs to be in the css </p></br>
+  <p>padding this needs to be in the css</p>
+  </br>
 
 
   <div class="table-responsive">
@@ -10,6 +11,7 @@
       <tr ng-repeat="fruit in $data | filter:Data.Color | filter:Data.Location ">
 
         <td>{{ $index + 1 }}</td>
+        <!-- td>{{ $id }}</td -->
         <td>{{color}}</td>
         <td data-title="'Product Id'" sortable="'id'">
           <a href="#/details/{{fruit.id}}">{{fruit.id}}</a>

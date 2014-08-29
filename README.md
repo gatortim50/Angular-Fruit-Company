@@ -53,8 +53,7 @@ Configuration in app.js
  git clone git@github.com:gatortim50/Angular-Fruit-Company.git
  cd Angular-Fruit-Company
  npm install
- bower install ng-table
- bower install angular-local-storage
+ bower install
  grunt serve 
 ```
 

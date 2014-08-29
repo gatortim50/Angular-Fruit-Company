@@ -12,16 +12,16 @@ var daApp = angular.module('demoApp', [
   ]);
 
 daApp.config(function ($routeProvider) {
-    $routeProvider
-      .when('/', {
-        templateUrl: 'src/fruit/views/Fruit.html',
-        controller: 'FruitCtrl'
-      })
-      .when('/details/:id', {
-        templateUrl: 'src/fruit/views/SearchDetails.html',
-        controller: 'SearchDetailsCtrl'
-      })
-      .otherwise({
-        redirectTo: '/'
-      });
-  });
+  $routeProvider
+    .when('/', {
+      templateUrl: 'src/fruit/views/Fruit.html',
+      controller: 'FruitCtrl'
+    })
+    .when('/details/:id', {
+      templateUrl: 'src/fruit/views/SearchDetails.html',
+      controller: 'SearchDetailsCtrl'
+    })
+    .otherwise({
+      redirectTo: '/'
+    });
+});
