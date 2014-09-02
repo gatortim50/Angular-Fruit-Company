@@ -1,9 +1,13 @@
-'use strict';
+(function(){
 
-daApp.controller('SearchPanelCtrl', function ( $scope, Data ) {
+  var searchPanelCtrl =  function ( $scope, dataSrvc ) {
 
   // shared service
   // communicate between sibling controllers
-  $scope.Data = Data;
+  $scope.Data = dataSrvc;
 
-});
+};
+
+  angular.module('demoApp').controller('searchPanelCtrl', searchPanelCtrl);
+
+}());

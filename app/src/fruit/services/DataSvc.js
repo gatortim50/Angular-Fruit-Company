@@ -1,10 +1,16 @@
-'use strict';
+(function () {
 
-daApp.factory('Data', function () {
 
-  return {
-    Color: '',
-    Location: ''
+  var dataSrvc =  function () {
+
+    return {
+      Color: '',
+      Location: ''
+    };
+
   };
 
-});
+  angular.module('demoApp').factory('dataSrvc', dataSrvc);
+
+
+}());

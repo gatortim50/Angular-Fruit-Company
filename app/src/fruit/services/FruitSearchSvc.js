@@ -1,24 +1,29 @@
-'use strict';
+(function () {
 
-daApp.factory('FruitSearchSrvc', function ($http) {
+  var fruitSearchSrvc = function ($http) {
 
-  return {
+    return {
 
-    getSearch: function () {
+      getSearch: function () {
 
-      var url = 'datastore/fruit.json';
-      console.log("--- Search url: " + url);
-      return $http.get(url);
+        var url = 'datastore/fruit.json';
+        console.log("--- Search url: " + url);
+        return $http.get(url);
 
-    },
+      },
 
-    getDetails: function () {
+      getDetails: function () {
 
-      var url = 'datastore/details.json';
-      return $http.get(url);
+        var url = 'datastore/details.json';
+        return $http.get(url);
 
-    }
+      }
+
+    };
 
   };
 
-});
+  angular.module('demoApp').factory('fruitSearchSrvc', fruitSearchSrvc);
+
+
+}());
