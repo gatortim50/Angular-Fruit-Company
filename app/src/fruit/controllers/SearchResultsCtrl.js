@@ -40,6 +40,8 @@
 
   };
 
+  searchResultsCtrl.$inject = ['$scope', '$filter', '$routeParams', '$location','localStorageService', 'ngTableParams','dataSrvc'];
+
   angular.module('demoApp').controller('searchResultsCtrl', searchResultsCtrl);
 
 }());

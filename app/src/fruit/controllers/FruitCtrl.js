@@ -10,6 +10,8 @@
 
   };
 
+  fruitCtrl.$inject = ['$scope', 'localStorageService', 'fruitSearchSrvc'];
+
   angular.module('demoApp').controller('fruitCtrl', fruitCtrl);
 
 }());

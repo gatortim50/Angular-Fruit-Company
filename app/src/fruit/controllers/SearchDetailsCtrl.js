@@ -50,6 +50,7 @@
 
   };
 
+  searchDetailsCtrl.$inject = ['$scope', '$filter', '$routeParams', '$location','localStorageService', 'ngTableParams','fruitSearchSrvc'];
 
   angular.module('demoApp').controller('searchDetailsCtrl', searchDetailsCtrl);
 

@@ -23,6 +23,8 @@
 
   };
 
+  fruitSearchSrvc.$inject = ['$http'];
+
   angular.module('demoApp').factory('fruitSearchSrvc', fruitSearchSrvc);
 
 
