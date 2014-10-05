@@ -15,10 +15,10 @@ AngularJS App that demonstrates the points in my teaching videos:
 9. ng-table / ng-repeat
 ```
 
-
+Client:
 Configuration in app.js
 
-2 JSON data files
+2 JSON data files - now moved to a back-end node/espress servrer
 ```
   fruit.json - search results table data
   details.json - details page
@@ -46,12 +46,17 @@ Configuration in app.js
   SearchResults.html - ng-table / ng-repeat and filters
   SearchDetails.html - simple detail page
 ```
+
   
  Steps to Run Project (assumes you have nodejs installed)
  
 ```
  git clone git@github.com:gatortim50/Angular-Fruit-Company.git
- cd Angular-Fruit-Company
+ cd Angular-Fruit-Company/server 
+ npm install
+ node server.js
+ 
+ cd ../client
  npm install
  bower install
  grunt serve 

@@ -4,11 +4,15 @@
 
     return {
 
-      getSearch: function () {
-
-        var url = 'datastore/fruit.json';
+      getResults: function () {
+        
+        var url = 'http://127.0.0.1:3000/product';
         console.log("--- Search url: " + url);
-        return $http.get(url);
+
+        return $http.get(url)
+          .then(function(response){
+            return response.data;
+          });
 
       },
 
