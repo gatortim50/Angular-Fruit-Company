@@ -1,7 +1,7 @@
-Angular Demo
-============
+Angular Demo - MEAN stack
+=========================
 
-AngularJS App that demonstrates the points in my teaching videos:
+AngularJS App that demonstrates points in my teaching videos:
 
 ```
 1. The app is scaffolded using yeoman with bower and grunt
@@ -14,11 +14,18 @@ AngularJS App that demonstrates the points in my teaching videos:
 8. ng-show breadcrumbs in bootstap header
 9. ng-table / ng-repeat
 ```
+Server:
+
+uses node or even better nodemon  and express with cors
+setup to run by default on: Back End Server running at http://127.0.0.1:3000
+the server will serve up the product json
+
+TODO: the server code read mongodb
 
 Client:
 Configuration in app.js
 
-2 JSON data files - now moved to a back-end node/espress servrer
+2 JSON data files - now moved to a back-end node/espress server
 ```
   fruit.json - search results table data
   details.json - details page
