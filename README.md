@@ -16,7 +16,7 @@ AngularJS App that demonstrates points in my teaching videos:
 ```
 Server:
 ```
-uses node or even better nodemon  and express with cors
+uses node or even better nodemon and express with cors
 setup to run by default on: Back End Server running at localhost:3000
 the server will serve up the product json
 
