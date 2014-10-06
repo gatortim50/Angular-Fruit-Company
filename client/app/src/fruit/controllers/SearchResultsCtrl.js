@@ -1,4 +1,5 @@
 (function () {
+  "use strict";
 
   var searchResultsCtrl = function ($scope, $filter, $routeParams, $location, localStorageService, ngTableParams, dataSrvc) {
 
