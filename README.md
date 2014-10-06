@@ -55,7 +55,6 @@ Configuration in app.js
   SearchDetails.html - simple detail page
 ```
 
-  
  Steps to Run Project (assumes you have nodejs installed)
  
 ```
@@ -64,10 +63,12 @@ Configuration in app.js
  npm install
  node server.js
  
- cd ../client
+ open new window and ...
+ 
+ cd Angular-Fruit-Company/client
  npm install
  bower install
- grunt serve 
+ grunt serve (or grunt serve --force)
 ```
 
 
