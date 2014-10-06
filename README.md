@@ -15,12 +15,13 @@ AngularJS App that demonstrates points in my teaching videos:
 9. ng-table / ng-repeat
 ```
 Server:
-
+```
 uses node or even better nodemon  and express with cors
-setup to run by default on: Back End Server running at http://127.0.0.1:3000
+setup to run by default on: Back End Server running at localhost:3000
 the server will serve up the product json
 
 TODO: the server code read mongodb
+```
 
 Client:
 Configuration in app.js
