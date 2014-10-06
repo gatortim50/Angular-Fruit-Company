@@ -1,10 +1,13 @@
 {
-    "name": "back-end",
-    "description": "Back End Server Application",
-    "version": "0.0.1",
-    "private": true,
-    "dependencies": {
-        "express": "latest",
-        "cors": "latest"
-    }
+  "name": "back-end",
+  "description": "Back End Server Application",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "body-parser": "^1.9.0",
+    "cors": "latest",
+    "express": "latest",
+    "logger": "0.0.1",
+    "mongodb": "^1.4.18"
+  }
 }
