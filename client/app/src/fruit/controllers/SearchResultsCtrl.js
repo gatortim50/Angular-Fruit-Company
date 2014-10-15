@@ -1,11 +1,16 @@
 (function () {
-  "use strict";
+    "use strict";
 
-  var searchResultsCtrl = function ($scope, $filter, $routeParams, $location, localStorageService, ngTableParams, dataSrvc) {
+    var searchResultsCtrl = function ($scope, $filter, $routeParams, $location, localStorageService, ngTableParams, dataSrvc) {
 
-    // get the fruit data from localStorage
-    var data = localStorageService.get('tableData');
-    //console.log("localStorageService: " + JSON.stringify(data));
+        // get the fruit data from localStorage
+        var data = localStorageService.get('tableData');
+        //console.log("localStorageService: " + JSON.stringify(data));
+
+        if (data == null || data == undefined) {
+          console.log("no search results");
+          return;
+        }
 
     $scope.tableParams = new ngTableParams({
       page: 1, // show first page
