@@ -26,7 +26,9 @@ module.exports = function(config) {
       'bower_components/angular-route/angular-route.js',
       'bower_components/angular-sanitize/angular-sanitize.js',
       'bower_components/angular-touch/angular-touch.js',
+      'bower_components/angular-local-storage/angular-local-storage.js',
       'app/src/**/*.js',
+      'app/src/fruit/**/*.js',
       'test/mock/**/*.js',
       'test/spec/**/*.js'
     ],
@@ -51,8 +53,9 @@ module.exports = function(config) {
 
     // Which plugins to enable
     plugins: [
-      'karma-phantomjs-launcher',
-      'karma-jasmine'
+      //'karma-phantomjs-launcher',
+      //'karma-jasmine'
+      'Chrome'
     ],
 
     // Continuous Integration mode
