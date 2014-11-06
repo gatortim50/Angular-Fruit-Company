@@ -1,25 +1,20 @@
 var express = require('express'),
   bodyParser = require('body-parser'),
-  logger = require('logger'),
   cors = require('cors');
 
-var product = require('./routes/product'); // product.js routes
- 
+var product = require('./routes/product');
+
 var app = express();
 
 app.use(bodyParser.json());
 
-//app.use(logger());     /* 'default', 'short', 'tiny', 'dev' */
-
 app.use(cors());
 
-// methods in routes/product.js
-app.get('/product', product.findAll);
-app.get('/product/:sku', product.findBySKU);
-app.post('/product', product.addProduct);
-app.put('/product/:id', product.updateProduct);
-app.delete('/product/:id', product.deleteProduct);
- 
+// invoke methods in routes/product.js
+app.get('/product', product.findProduct);     // http://127.0.0.1:3000/product
+app.get('/product/:id', product.findById);  // http://127.0.0.1:3000/product/1
+app.get('/products', product.findAll);        // http://127.0.0.1:3000/products
+
 
 var port = 3000;
 app.listen(port);

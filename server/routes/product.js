@@ -1,31 +1,16 @@
-var mongo = require('mongodb');
+//
 
-var Server = mongo.Server,
-  Db = mongo.Db,
-  BSON = mongo.BSONPure;
+exports.findProduct = function(req, res) {
+  var rs = 1;
+  res.send({product: rs});
+};
 
-var server = new Server('localhost', 27017, {auto_reconnect: true});
-db = new Db('fruitdb', server);
-
-db.open(function(err, db) {
-  if(!err) {
-    console.log("Connected to 'fruitdb' database");
-    db.collection('product', {strict:true}, function(err, collection) {
-      if (err) {
-        console.log("The 'product' collection doesn't exist. Creating it with sample data...");
-        //populateDB();
-      }
-    });
-  }
-});
-
-
-exports.findBySKU = function(req, res) {
-    res.send({id:req.params.sku, name: "The Name", description: "description"});
+exports.findById = function(req, res) {
+  res.send({id:req.params.id, name: "The Test Name", description: "The Test Description"});
 };
 
 exports.findAll = function(req, res) {
-    res.send([  
+  res.send([
     {
       "sku": "5207A",
       "name": "Red Delicious Apple",
@@ -68,17 +53,5 @@ exports.findAll = function(req, res) {
       "color": "Red",
       "location": "Jamaica"
     }
-    ]);
+  ]);
 };
-
-exports.addProduct = function(req, res) {
-
-};
-
-exports.updateProduct = function(req, res) {
-
-};
-exports.deleteProduct = function(req, res) {
-
-};
-
