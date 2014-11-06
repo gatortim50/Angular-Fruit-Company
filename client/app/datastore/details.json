@@ -6,6 +6,20 @@
       "organic": "No",
       "condition": "Standard",
       "location": "Sarasota, Florida USA"
+    },
+    {
+      "grower": "Olive Branch",
+      "collection_date": "2014-9-20",
+      "organic": "Yes",
+      "condition": "Premium",
+      "location": "Napa Valley, CA USA"
+    },
+    {
+      "grower": "Ole Marie",
+      "collection_date": "2014-10-20",
+      "organic": "Yes",
+      "condition": "Premium",
+      "location": "Sacramento, CA USA"
     }
   ]
 }
