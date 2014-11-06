@@ -15,7 +15,7 @@
       page: 1, // show first page
       count: data.length,
       sorting: {
-        sku: 'asc' // initial sorting
+        id: 'asc' // initial sorting
       }
     }, {
       total: data.length, // length of data

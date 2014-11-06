@@ -1,7 +1,7 @@
 (function () {
   "use strict";
 
-  var searchDetailsCtrl = function ($scope, $filter, $routeParams, $location, localStorageService, ngTableParams, fruitSearchSrvc) {
+  var searchDetailsCtrl = function ($scope, $routeParams, $location, localStorageService, fruitSearchSrvc) {
 
     $scope.$on('$routeChangeSuccess', function () {
       var path = $location.path();
@@ -16,42 +16,22 @@
 
       // get details and store in localStorage
       $scope.data = fruitSearchSrvc.getDetails().success(function (data) {
-        //console.log("details: " + JSON.stringify(data.details));
 
         localStorageService.set('details', data.details);
 
-        data = data.details;
+        $scope.details = data.details;
+        var details = $scope.details;
+        //console.log("details: " + JSON.stringify(details));
 
-
-        $scope.tableParams = new ngTableParams({
-          page: 1, // show first page
-          count: data.length,
-          sorting: {
-            grower: 'asc' // initial sorting
-          }
-        }, {
-          total: data.length, // length of data
-          getData: function ($defer, params) {
-            // use build-in angular filter
-            var filteredData = params.filter() ?
-              $filter('filter')(data, params.filter()) :
-              data;
-            var orderedData = params.sorting() ?
-              $filter('orderBy')(filteredData, params.orderBy()) :
-              data;
-            params.total(orderedData.length); // set total for recalc pagination
-            $defer.resolve(orderedData.slice((params.page() - 1) * params.count(), params.page() * params.count()));
-          }
-        });
+        $scope.gridOptions = { data: 'details' };
 
       });
 
     }); // end scope on
 
-
   };
 
-  searchDetailsCtrl.$inject = ['$scope', '$filter', '$routeParams', '$location','localStorageService', 'ngTableParams','fruitSearchSrvc'];
+  searchDetailsCtrl.$inject = ['$scope', '$routeParams', '$location','localStorageService', 'fruitSearchSrvc'];
 
   angular.module('demoApp').controller('searchDetailsCtrl', searchDetailsCtrl);
 

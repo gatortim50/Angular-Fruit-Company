@@ -9,6 +9,7 @@
       'ngRoute',
       'ngSanitize',
       'ngTable',
+      'ui.grid',
       'ngTouch',
       'LocalStorageModule'
     ]);

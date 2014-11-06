@@ -9,33 +9,9 @@
   <p>
     <h5>Details for Product Id: {{productId}}</h5>
   </p>
-  <div class="table-responsive">
 
-    <table ng-table="tableParams" class="table">
+  <div id="grid1" ui-grid="{ data: details }" class="gridStyle"></div>
 
-      <tr ng-repeat="detail in $data">
-
-        <td data-title="'Grower'">
-          {{detail.grower}}
-        </td>
-        <td data-title="'Organic'">
-          {{detail.organic}}
-        </td>
-        <td data-title="'Condition'">
-          {{detail.condition}}
-        </td>
-        <td data-title="'Collection Date'">
-          {{detail.collection_date}}
-        </td>
-        <td data-title="'Location'">
-          {{detail.location}}
-        </td>
-
-      </tr>
-
-    </table>
-
-  </div>
   <form>
     <INPUT Type="button" VALUE="Back" onClick="history.go(-1);return true;">
   </form>

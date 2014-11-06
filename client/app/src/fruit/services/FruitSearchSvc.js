@@ -6,8 +6,8 @@
     return {
 
       getResults: function () {
-        
-        var url = 'http://127.0.0.1:3000/product';
+
+        var url = 'http://127.0.0.1:3000/products';
         console.log("--- Search url: " + url);
 
         return $http.get(url)
