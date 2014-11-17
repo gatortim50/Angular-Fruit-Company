@@ -13,9 +13,7 @@
 
       //get details and store in localStorage
       $scope.details = fruitSearchSrvc.getDetail(tableData, $routeParams.productId);
-      var details = $scope.details;
-      console.log("found details: " + JSON.stringify(details));
-      $scope.gridOptions = { data: 'details' };
+      console.log("found details: " + JSON.stringify($scope.details));
 
     }); // end scope on
 

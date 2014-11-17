@@ -27,11 +27,13 @@
       getDetail: function (details, id) {
 
         var len = details.length;
+        var myArry = [];
 
         for (var i = 0; i < len; i += 1) {
           var result = details[i];
           if (result.id === id) {
-            return result;
+            myArry.push(result);
+            return myArry;
           }
         }
 

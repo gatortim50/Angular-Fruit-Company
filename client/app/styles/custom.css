@@ -3,4 +3,10 @@
   transition: all 0.4s ease 0s;
 }
 
+.gridStyle {
+  border: 1px solid rgb(212,212,212);
+  width: 700px;
+  height: 200px
+}
+
 
