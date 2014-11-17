@@ -2,33 +2,33 @@
 
   <div class="table-top">
 
-  <div class="table-responsive">
+    <div class="table-responsive">
 
-    <table ng-table="tableParams" class="table table-striped">
+      <table ng-table="tableParams" class="table table-striped">
 
-      <tr ng-repeat="fruit in $data | filter:Data.Color | filter:Data.Location ">
+        <tr ng-repeat="fruit in $data | filter:Data.Color | filter:Data.Location ">
 
-        <td>{{ $index + 1 }}</td>
-        <!-- td>{{ $id }}</td -->
-        <td>{{color}}</td>
-        <td data-title="'Product SKU'" sortable="'id'">
-          <a href="#/details/{{fruit.id}}">{{fruit.id}}</a>
-        </td>
-        <td data-title="'Name'" sortable="'name'">
-          {{fruit.name}}
-        </td>
-        <td data-title="'Color'" sortable="'color'">
-          {{fruit.color}}
-        </td>
-        <td data-title="'Location'" sortable="'location'">
-          {{fruit.location}}
-        </td>
+          <td>{{ $index + 1 }}</td>
+          <!-- td>{{ $id }}</td -->
+          <td>{{color}}</td>
+          <td data-title="'Product SKU'" sortable="'id'">
+            <a href="#/details/{{fruit.id}}">{{fruit.id}}</a>
+          </td>
+          <td data-title="'Name'" sortable="'name'">
+            {{fruit.name}}
+          </td>
+          <td data-title="'Color'" sortable="'color'">
+            {{fruit.color}}
+          </td>
+          <td data-title="'Location'" sortable="'location'">
+            {{fruit.location}}
+          </td>
 
-      </tr>
+        </tr>
 
-    </table>
-    <!--tt>{{data| json}}</tt><br/ -->
-  </div>
+      </table>
+      <!--tt>{{data| json}}</tt><br/ -->
+    </div>
   </div>
 
 
