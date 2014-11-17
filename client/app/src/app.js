@@ -20,7 +20,7 @@
         templateUrl: 'src/fruit/views/Fruit.html',
         controller: 'fruitCtrl'
       })
-      .when('/details/:id', {
+      .when('/details/:productId', {
         templateUrl: 'src/fruit/views/SearchDetails.html',
         controller: 'searchDetailsCtrl'
       })

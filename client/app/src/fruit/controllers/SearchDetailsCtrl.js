@@ -4,23 +4,18 @@
   var searchDetailsCtrl = function ($scope, $routeParams, $location, localStorageService, fruitSearchSrvc) {
 
     $scope.$on('$routeChangeSuccess', function () {
-      var path = $location.path();
-      console.log("path changed to: " + path);
-      var len = path.length;
+      console.log("path changed to: " + $location.path());
 
-      $scope.productId = path.slice(9, len);
+      console.log("productId: " + $routeParams.productId);
+      $scope.productId = $routeParams.productId;
 
-      console.log("productId: " + $scope.productId);
-      localStorageService.set('productId', $scope.productId);
       var tableData = localStorageService.get('tableData');
 
-
       //get details and store in localStorage
-      $scope.details = fruitSearchSrvc.getDetail(tableData, $scope.productId);
+      $scope.details = fruitSearchSrvc.getDetail(tableData, $routeParams.productId);
       var details = $scope.details;
       console.log("found details: " + JSON.stringify(details));
       $scope.gridOptions = { data: 'details' };
-
 
     }); // end scope on
 
