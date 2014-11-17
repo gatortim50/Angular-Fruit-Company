@@ -12,20 +12,15 @@
 
       console.log("productId: " + $scope.productId);
       localStorageService.set('productId', $scope.productId);
+      var tableData = localStorageService.get('tableData');
 
 
-      // get details and store in localStorage
-      $scope.data = fruitSearchSrvc.getDetails().success(function (data) {
+      //get details and store in localStorage
+      $scope.details = fruitSearchSrvc.getDetail(tableData, $scope.productId);
+      var details = $scope.details;
+      console.log("found details: " + JSON.stringify(details));
+      $scope.gridOptions = { data: 'details' };
 
-        localStorageService.set('details', data.details);
-
-        $scope.details = data.details;
-        var details = $scope.details;
-        //console.log("details: " + JSON.stringify(details));
-
-        $scope.gridOptions = { data: 'details' };
-
-      });
 
     }); // end scope on
 

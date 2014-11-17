@@ -22,6 +22,19 @@
         var url = 'datastore/details.json';
         return $http.get(url);
 
+      },
+
+      getDetail: function (details, id) {
+
+        var len = details.length;
+
+        for (var i = 0; i < len; i += 1) {
+          var result = details[i];
+          if (result.id === id) {
+            return result;
+          }
+        }
+
       }
 
     };
