@@ -15,7 +15,30 @@ exports.findAll = function(req, res) {
       "id": "5207A",
       "name": "Red Delicious Apple",
       "color": "Red",
-      "location": "USA"
+      "location": "USA",
+      "details": [
+        {
+          "grower": "Pleasant Farms",
+          "collection_date": "2014-7-15",
+          "organic": "No",
+          "condition": "Standard",
+          "location": "Sarasota, Florida USA"
+        },
+        {
+          "grower": "Olive Branch",
+          "collection_date": "2014-9-20",
+          "organic": "Yes",
+          "condition": "Premium",
+          "location": "Napa Valley, CA USA"
+        },
+        {
+          "grower": "Ole Marie",
+          "collection_date": "2014-10-20",
+          "organic": "Yes",
+          "condition": "Premium",
+          "location": "Sacramento, CA USA"
+        }
+      ]
     },
     {
       "id": "5206A",
