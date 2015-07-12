@@ -3,6 +3,9 @@
   "description": "Back End Server Application",
   "version": "0.0.1",
   "private": true,
+  "scripts":{
+    "start": "node server.js"
+  },
   "dependencies": {
     "body-parser": "latest",
     "cors": "latest",
