@@ -7,7 +7,10 @@
 
       getResults: function () {
 
+        // use the node server
         var url = 'http://127.0.0.1:3000/products';
+        // or use the json files in datastore/fruit.json
+        // url = 'datastore/fruit.json';
         console.log("--- Search url: " + url);
 
         return $http.get(url)
@@ -17,23 +20,16 @@
 
       },
 
-      getDetails: function () {
-
-        var url = 'datastore/details.json';
-        return $http.get(url);
-
-      },
-
       getDetail: function (details, id) {
 
         var len = details.length;
-        var myArry = [];
+        var myArray = [];
 
         for (var i = 0; i < len; i += 1) {
           var result = details[i];
           if (result.id === id) {
-            myArry.push(result);
-            return myArry;
+            myArray.push(result);
+            return myArray;
           }
         }
 

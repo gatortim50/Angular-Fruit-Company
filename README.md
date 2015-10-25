@@ -11,7 +11,7 @@ AngularJS App that demonstrates points in my teaching videos:
 5. Routing - /details/:id
 6. Shared service to communicate between sibling controllers
 7. Break up our application using html partials with ng-include
-8. ng-show breadcrumbs in bootstap header
+8. ng-show breadcrumbs in bootstrap header
 9. ng-table / ng-repeat
 ```
 Server:
@@ -69,7 +69,7 @@ Configuration in app.js
  cd Angular-Fruit-Company/client
  npm install
  bower install
- grunt serve (or grunt serve --force)
+ grunt serve --force
 ```
 
 

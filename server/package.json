@@ -3,12 +3,15 @@
   "description": "Back End Server Application",
   "version": "0.0.1",
   "private": true,
-  "scripts":{
-    "start": "node server.js"
+  "scripts": {
+    "start": "nodemon server.js"
   },
   "dependencies": {
     "body-parser": "latest",
     "cors": "latest",
     "express": "latest"
+  },
+  "devDependencies": {
+    "nodemon": "^1.7.3"
   }
 }
