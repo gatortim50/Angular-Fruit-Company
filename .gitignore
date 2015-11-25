@@ -9,4 +9,4 @@ bower_components
 *.js.deps
 *.js.map
 .idea
-.idea/*
+

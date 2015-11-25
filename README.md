@@ -3,6 +3,23 @@ Angular Demo - MEAN stack
 
 AngularJS App that demonstrates points in my teaching videos:
 
+ Steps to Run Project (assumes you have nodejs installed)
+
+```
+ git clone git@github.com:gatortim50/Angular-Fruit-Company.git
+ cd Angular-Fruit-Company/server
+ npm install
+ npm start
+
+
+ open new window and ...
+
+ cd Angular-Fruit-Company/client
+ npm install
+ bower install
+ grunt serve --force
+```
+
 ```
 1. The app is scaffolded using yeoman with bower and grunt
 2. Load data via $http service - local json files
@@ -54,22 +71,7 @@ Configuration in app.js
   SearchDetails.html - simple detail page
 ```
 
- Steps to Run Project (assumes you have nodejs installed)
 
-```
- git clone git@github.com:gatortim50/Angular-Fruit-Company.git
- cd Angular-Fruit-Company/server
- npm install
- npm start
-
-
- open new window and ...
-
- cd Angular-Fruit-Company/client
- npm install
- bower install
- grunt serve --force
-```
 
 
 
