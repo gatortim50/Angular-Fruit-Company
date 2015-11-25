@@ -16,11 +16,10 @@ AngularJS App that demonstrates points in my teaching videos:
 ```
 Server:
 ```
-uses node or even better nodemon and express with cors
+uses nodemon and express with cors
 setup to run by default on: Back End Server running at localhost:3000
 the server will serve up the product json
 
-TODO: the server code read mongodb
 ```
 
 Client:
@@ -35,7 +34,7 @@ Configuration in app.js
 2 Services
 ```
   FruitSearchSvc.js - json data representing the fruit table
-  DataSvc.js - shared service used by sibling controllers SearchPanel and SearchResults
+  DataSvc.js - shared service used by sibling controllers
 ```
 
 4 Controllers
