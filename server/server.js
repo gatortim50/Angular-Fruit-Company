@@ -18,4 +18,4 @@ app.get('/products', product.findAll);        // http://127.0.0.1:3000/products
 
 var port = 3000;
 app.listen(port);
-console.log('Back End Server running at http://127.0.0.1:' + port);
+console.log('Server running at http://127.0.0.1:' + port);
