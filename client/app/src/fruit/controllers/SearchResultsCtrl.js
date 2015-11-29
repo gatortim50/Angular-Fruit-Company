@@ -1,12 +1,12 @@
 (function () {
   "use strict";
 
-  var searchResultsCtrl = function ($scope, $filter, $routeParams, $location, $window, ngTableParams, dataSrvc) {
+  var searchResultsCtrl = function ($scope, $filter, $window, ngTableParams, dataSrvc) {
 
     // get the fruit data from html5 session storage
     // and convert to JSON obj for ngTable
     var data = JSON.parse($window.sessionStorage.tableData);
-    console.log("searchResultsCtrl: " + $window.sessionStorage.tableData);
+    //console.log("searchResultsCtrl: " + $window.sessionStorage.tableData);
 
     if (data == null || data == undefined) {
       console.log("data error: " + data);
@@ -46,7 +46,7 @@
 
   };
 
-  searchResultsCtrl.$inject = ['$scope', '$filter', '$routeParams', '$location', '$window', 'ngTableParams', 'dataSrvc'];
+  searchResultsCtrl.$inject = ['$scope', '$filter', '$window', 'ngTableParams', 'dataSrvc'];
 
   angular.module('demoApp').controller('searchResultsCtrl', searchResultsCtrl);
 

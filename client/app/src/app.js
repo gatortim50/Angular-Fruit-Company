@@ -6,26 +6,18 @@
       'ngAnimate',
       'ngCookies',
       'ngResource',
-      'ngRoute',
+      'ui.router',
       'ngSanitize',
       'ngTable',
       'ui.grid',
       'ngTouch'
     ])
 
-    .config(function ($routeProvider) {
-    $routeProvider
-      .when('/', {
-        templateUrl: 'src/fruit/views/Fruit.html',
-        controller: 'fruitCtrl'
-      })
-      .when('/details/:productId', {
-        templateUrl: 'src/fruit/views/SearchDetails.html',
-        controller: 'searchDetailsCtrl'
-      })
-      .otherwise({
-        redirectTo: '/'
-      });
-  });
+    .config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
+      $urlRouterProvider
+        .otherwise('/');
+
+      $locationProvider.html5Mode(true);
+    });
 
 }());
