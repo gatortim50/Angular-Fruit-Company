@@ -1,13 +1,15 @@
 (function () {
   "use strict";
 
-  var searchResultsCtrl = function ($scope, $filter, $routeParams, $location, localStorageService, ngTableParams, dataSrvc) {
+  var searchResultsCtrl = function ($scope, $filter, $routeParams, $location, $window, ngTableParams, dataSrvc) {
 
-    // get the fruit data from localStorage
-    var data = localStorageService.get('tableData');
-    //console.log("localStorageService: " + JSON.stringify(data));
+    // get the fruit data from html5 session storage
+    // and convert to JSON obj for ngTable
+    var data = JSON.parse($window.sessionStorage.tableData);
+    console.log("searchResultsCtrl: " + $window.sessionStorage.tableData);
 
     if (data == null || data == undefined) {
+      console.log("data error: " + data);
       return;
     }
 
@@ -39,12 +41,12 @@
     // watch for table data change and store off search results
     // so its persisted when we return from details page
     $scope.$watch('data', function () {
-      localStorageService.set('data', $scope.data);
+      $window.sessionStorage.data = $scope.data;
     });
 
   };
 
-  searchResultsCtrl.$inject = ['$scope', '$filter', '$routeParams', '$location', 'localStorageService', 'ngTableParams', 'dataSrvc'];
+  searchResultsCtrl.$inject = ['$scope', '$filter', '$routeParams', '$location', '$window', 'ngTableParams', 'dataSrvc'];
 
   angular.module('demoApp').controller('searchResultsCtrl', searchResultsCtrl);
 

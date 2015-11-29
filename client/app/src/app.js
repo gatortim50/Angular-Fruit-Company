@@ -10,8 +10,7 @@
       'ngSanitize',
       'ngTable',
       'ui.grid',
-      'ngTouch',
-      'LocalStorageModule'
+      'ngTouch'
     ]);
 
   daApp.config(function ($routeProvider) {

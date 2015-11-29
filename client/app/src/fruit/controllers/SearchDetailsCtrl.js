@@ -1,25 +1,19 @@
 (function () {
   "use strict";
 
-  var searchDetailsCtrl = function ($scope, $routeParams, $location, localStorageService, fruitSearchSrvc) {
+  var searchDetailsCtrl = function ($scope, $routeParams, $location, $window, fruitSearchSrvc) {
 
     $scope.$on('$routeChangeSuccess', function () {
       console.log("path changed to: " + $location.path());
 
-      console.log("productId: " + $routeParams.productId);
-      $scope.productId = $routeParams.productId;
-
-      var tableData = localStorageService.get('tableData');
-
-      //get details and store in localStorage
-      $scope.details = fruitSearchSrvc.getDetail(tableData, $routeParams.productId);
-      console.log("found details: " + JSON.stringify($scope.details));
+      //get details and store in $window session
+      $scope.details = fruitSearchSrvc.getDetail($window.sessionStorage.tableData, $routeParams.productId);
 
     }); // end scope on
 
   };
 
-  searchDetailsCtrl.$inject = ['$scope', '$routeParams', '$location','localStorageService', 'fruitSearchSrvc'];
+  searchDetailsCtrl.$inject = ['$scope', '$routeParams', '$location','$window', 'fruitSearchSrvc'];
 
   angular.module('demoApp').controller('searchDetailsCtrl', searchDetailsCtrl);
 

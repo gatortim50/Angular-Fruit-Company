@@ -11,7 +11,7 @@
         var url = 'http://127.0.0.1:3000/products';
         // or use the json files in datastore/fruit.json
         // url = 'datastore/fruit.json';
-        console.log("--- Search url: " + url);
+        //console.log("--- Search url: " + url);
 
         return $http.get(url)
           .then(function(response){
@@ -21,6 +21,8 @@
       },
 
       getDetail: function (details, id) {
+
+        var details = JSON.parse(details);
 
         var len = details.length;
         var myArray = [];

@@ -1,21 +1,15 @@
 (function () {
   "use strict";
 
-  var fruitCtrl = function ($scope, localStorageService, fruitSearchSrvc) {
-
-    function clearAll() {
-      console.log("no search results clear localstorage");
-      return localStorageService.clearAll();
-    }
+  var fruitCtrl = function ($scope, $window, fruitSearchSrvc) {
 
     var onComplete = function(data){
       $scope.data = data;
-      //console.log("fruits: " + JSON.stringify($scope.data));
-      localStorageService.set('tableData', $scope.data);
+      $window.sessionStorage.tableData = JSON.stringify(data);
+      //console.log("product: " + $window.sessionStorage.tableData);
     };
 
     var onError = function(reason){
-      clearAll();
       $scope.error = reason;
     };
 
@@ -24,7 +18,7 @@
 
   };
 
-  fruitCtrl.$inject = ['$scope', 'localStorageService', 'fruitSearchSrvc'];
+  fruitCtrl.$inject = ['$scope', '$window', 'fruitSearchSrvc'];
 
   angular.module('demoApp').controller('fruitCtrl', fruitCtrl);
 
