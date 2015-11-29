@@ -1,7 +1,7 @@
 (function () {
   "use strict";
 
-  var daApp = angular.module('demoApp',
+  angular.module('demoApp',
     [
       'ngAnimate',
       'ngCookies',
@@ -11,9 +11,9 @@
       'ngTable',
       'ui.grid',
       'ngTouch'
-    ]);
+    ])
 
-  daApp.config(function ($routeProvider) {
+    .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'src/fruit/views/Fruit.html',
