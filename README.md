@@ -1,21 +1,25 @@
 Angular Demo - MEAN stack
 =========================
 
-
  Steps to Run Project (assumes you have nodejs installed)
 
 ```
  git clone git@github.com:gatortim50/Angular-Fruit-Company.git
  cd Angular-Fruit-Company/server
  npm install && npm start
+```
 
+ open new terminal window and ...
+ --------------------------------
 
- # open new window and ...
-
+```
  cd Angular-Fruit-Company/client
  npm install && bower install
- 
- # this old version grunt requires force
+```
+
+ this old version grunt requires force
+ -------------------------------------
+```
  grunt serve --force
 ```
 
