@@ -7,15 +7,15 @@ Angular Demo - MEAN stack
 ```
  git clone git@github.com:gatortim50/Angular-Fruit-Company.git
  cd Angular-Fruit-Company/server
- npm install
- npm start
+ npm install && npm start
 
 
- open new window and ...
+ # open new window and ...
 
  cd Angular-Fruit-Company/client
- npm install
- bower install
+ npm install && bower install
+ 
+ # this old version grunt requires force
  grunt serve --force
 ```
 
