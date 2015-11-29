@@ -23,7 +23,7 @@ AngularJS App that demonstrates points in my teaching videos:
 ```
 1. The app is scaffolded using yeoman with bower and grunt
 2. Load data via $http service - local json files
-3. LocalStorageService to store session data - persist search results between pages
+3. $window.sessionStorage - persist search results between pages
 4. Create a details page
 5. Routing - /details/:id
 6. Shared service to communicate between sibling controllers
