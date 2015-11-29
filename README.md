@@ -1,7 +1,6 @@
 Angular Demo - MEAN stack
 =========================
 
-AngularJS App that demonstrates points in my teaching videos:
 
  Steps to Run Project (assumes you have nodejs installed)
 
