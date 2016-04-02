@@ -8,10 +8,11 @@
       getResults: function () {
 
         // use the node server
-        var url = 'http://127.0.0.1:3000/products';
+        var url = 'http://127.0.0.1:4000/products';
+
         // or use the json files in datastore/fruit.json
         // url = 'datastore/fruit.json';
-        //console.log("--- Search url: " + url);
+        console.log("--- Search url: ", url);
 
         return $http.get(url)
           .then(function(response){

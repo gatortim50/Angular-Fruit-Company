@@ -5,8 +5,12 @@
 
     // get the fruit data from html5 session storage
     // and convert to JSON obj for ngTable
-    var data = JSON.parse($window.sessionStorage.tableData);
-    //console.log("searchResultsCtrl: " + $window.sessionStorage.tableData);
+    var data = null;
+    if ($window.sessionStorage.tableData){
+      data = JSON.parse($window.sessionStorage.tableData);
+      console.log("searchResultsCtrl: " + $window.sessionStorage.tableData);
+    }
+
 
     if (data == null || data == undefined) {
       console.log("data error: " + data);
